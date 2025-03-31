@@ -1,5 +1,5 @@
-# File Converter
-File converter is a simple and easy to use but basic wrapper for FFmpeg.
+# Media Converter
+Media Converter is a simple and easy to use but basic wrapper for FFmpeg.
 ## OS Compatibility
 Released binaries are built for Windows, Linux binaries will come in Version 1.1
 # Installation
