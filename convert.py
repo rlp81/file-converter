@@ -2,6 +2,8 @@ import subprocess
 import shutil
 import os
 
+executable = r".\ffmpeg.exe"
+
 name = input(r"Directory to file (C:\Path\To\File.mp4 or File.mp4: ").replace('"', '')
 new = name
 if len(name.split(" ")) != 1:
@@ -24,6 +26,6 @@ if name != new:
 
 output = input("Output filetype e.g. mp3: ")
 print(f"{name.split('.')[0]}.{output}")
-subprocess.call([r".\_internal\ffmpeg.exe", "-i", name, f"{name.split('.')[0]}.{output}"])
-if new:
+subprocess.call([executable, "-i", name, f"{name.split('.')[0]}.{output}"])
+if new != name:
     os.remove(new)
