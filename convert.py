@@ -22,10 +22,9 @@ for path in new.split("\\"):
 new = "\\".join(amt)
 if name != new:
     shutil.copy(name, new)
-    name = new
 
 output = input("Output filetype e.g. mp3: ")
-print(f"{name.split('.')[0]}.{output}")
-subprocess.call([executable, "-i", name, f"{name.split('.')[0]}.{output}"])
+
+subprocess.call([executable, "-i", new, f"{name.split('.')[0]}.{output}"])
 if new != name:
     os.remove(new)
